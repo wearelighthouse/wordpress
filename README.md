@@ -5,7 +5,7 @@
 ## Table of Contents
 
 1. [Project Structure](#project-structure)
-2. Theme
+2. [Theme](#theme)
 2. Custom Post Types
 3. Custom Taxonomies
 4. Custom Meta (Boxes)
@@ -44,3 +44,15 @@ Easy right?
 * Wordpress is now also a dependency, when you run `composer-install` it is installed to `/web/wp`. There is no need to look in that folder just know its there!
 * The document root for Wordpress projects is no longer the root directory, for example `/var/www/wordpress-site`. In the example it would be `/var/www/wordpress-site/web`
 
+## Theme
+
+We haven't settled on a definitive theme skeleton yet, there are definite points within theme developoment that are nailed down like [scss linting](https://github.com/wearelighthouse/linthouse-scss) and our [scss skeleton](https://github.com/wearelighthouse/lightbones-scss) but not the entire theme itself.
+
+The two starting points that are currently being used are:
+
+* [Lightbones](https://bitbucket.org/wearelighthouse/lightbones) - This has been used on a lot of sites although is a bit outdated
+* [Sage](https://github.com/roots/sage) - This could be seen as the accompanying theme to Bedrock
+
+### Installation
+
+Once you've chosen your starting point you need to put it somewhere, Bedrock abstracts `wp-content` out of the Wordpress core to `/web/app`. In there you will find all the directories you would expect to find in `wp-content`, just drop your theme in `/web/app/themes` and you are good to go.
