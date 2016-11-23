@@ -4,11 +4,11 @@
 
 ## Table of Contents
 
-1. [Project Structure](#project-structure)
-2. [Theme](#theme)
-3. [Plugins](#plugins)
-3. [Must Use Plugins](#must-use-plugins)
-5. [Custom Post Types](#custom-post-types)
+1. [Project Structure](#1.project-structure)
+2. [Theme](#2.theme)
+3. [Plugins](#3.plugins)
+4. [Must Use Plugins](#4.must-use-plugins)
+5. [Custom Post Types](#5.custom-post-types)
 6. Custom Taxonomies
 7. Custom Meta (Boxes)
 
@@ -93,7 +93,7 @@ This is normally the case if it is a paid plugin, but don't worry there is a wor
 4. In your projects `composer.json` there will be a propery called [`repositories`](https://bitbucket.org/wearelighthouse/donatemate/src/765e9dca5a26701d1a17e1c07be6c5465fea4305/composer.json?at=master&fileviewer=file-view-default#composer.json-29), you will need to add the [repository](https://bitbucket.org/wearelighthouse/gravityforms/src/6edeeb7f6158c3e903c25f32b648fef3c91b5160/composer.json?at=master&fileviewer=file-view-default#composer.json-4) specified in your plugins `composer.json` to that array
 5. Install it like other packages by running  `composer require wearelighthouse/gravityforms` from the root of your project
 
-## 3. Must Use Plugins
+## 4. Must Use Plugins
 
 **From the [Wordpress Codex](https://codex.wordpress.org/Must_Use_Plugins)**
 
@@ -129,7 +129,7 @@ The default `.gitignore` is set to ignore all directories within `web/app/mu-plu
 
 `!web/app/mu-plugins/yourplugin`
 
-## 4. Custom Post Types
+## 5. Custom Post Types
 
 Custom post types should be created as [mu-plugins](#must-use-plugins), this will mean they are always loaded (cause you generally always need them!). It also means everyone will know where to create and find custom post types when working on a project.
 
@@ -142,4 +142,4 @@ Slug | Plural | people
 
 **N.B.** there will be times where the slug might not be the strict plural of the post name, for example team. But the slug should still represent a group of the singular.
 
-[An example custom post type](#).
+[An example custom post type](examples/mu-plugins/CustomPostTypePerson.php).
