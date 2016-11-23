@@ -1,0 +1,8 @@
+{
+  "name": "wearelighthouse/plugin-repository",
+  "type": "wordpress-plugin",
+  "repositories": [{
+    "type": "vcs",
+    "url": "git@bitbucket.org:wearelighthouse/plugin-repository.git"
+  }]
+}
