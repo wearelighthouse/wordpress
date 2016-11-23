@@ -8,7 +8,7 @@
 2. [Theme](#theme)
 3. [Plugins](#plugins)
 3. [Must Use Plugins](#must-use-plugins)
-5. Custom Post Types
+5. [Custom Post Types](#custom-post-types)
 6. Custom Taxonomies
 7. Custom Meta (Boxes)
 
@@ -128,3 +128,18 @@ Just drop the file/folder into `web/app/mu-plugins`.
 The default `.gitignore` is set to ignore all directories within `web/app/mu-plugins`, if you add a directory and need it checked it you will need to add a negating rule.
 
 `!web/app/mu-plugins/yourplugin`
+
+## 4. Custom Post Types
+
+Custom post types should be created as [mu-plugins](#must-use-plugins), this will mean they are always loaded (cause you generally always need them!). It also means everyone will know where to create and find custom post types when working on a project.
+
+### Naming Conventions
+
+Property | Rule | Example
+---------|------|--------
+Name | Singular | person
+Slug | Plural | people
+
+**N.B.** there will be times where the slug might not be the strict plural of the post name, for example team. But the slug should still represent a group of the singular.
+
+[An example custom post type](#).
