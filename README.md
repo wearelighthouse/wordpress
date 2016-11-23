@@ -9,7 +9,7 @@
 3. [Plugins](#3-plugins)
 4. [Must Use Plugins](#4-must-use-plugins)
 5. [Custom Post Types and Taxonomies](#5-custom-post-types-and-taxonomies)
-6. Custom Meta (Boxes)
+6. [Custom Meta (Boxes)](#6-custom-meta-boxes)
 
 ## 1. Project Structure
 
