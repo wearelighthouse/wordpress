@@ -15,7 +15,7 @@
 
 ---
 
-**Always** create a two user accounts; `lighthouse`, for our use, with the email `accounts@wearelighthouse.com` and one for the client with their appropriate details. Make sure both logins are stored in 1Password along side any relevant urls.
+**Always** create two user accounts; `lighthouse`, for our use, with the email `accounts@wearelighthouse.com` and one for the client with their appropriate details. Make sure both logins are stored in 1Password along side any relevant urls.
 
 ---
 
