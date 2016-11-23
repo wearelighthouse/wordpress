@@ -18,21 +18,21 @@ Wordpress development is not just the theme, that would be theme development, as
 
 ### Bedrock
 
-[Bedrock](https://roots.io/bedrock/) has a lot to offer and the best thing to do is to head over to their [site](https://roots.io/bedrock/) and learn all about it there. These are the reasons we are using is (taken pretty much straight from their site):
+Bedrock has a lot to offer and the best thing to do is to head over to their [site](https://roots.io/bedrock/) and learn all about it there. These are the reasons we are using is (taken pretty much straight from their site):
 
-**Better Wordpress project structure**
+> Better Wordpress project structure
 
 Every bit of code should "live" somewhere and that somewhere should be obvious.
 
-**Dependency management**
+> Dependency management
 
 Composer is how we manage PHP dependencies everywhere but Wordpress, this alone is reason enough to use Bedrock.
 
-**Easy Wordpress configuration**
+> Easy Wordpress configuration
 
 Using Dotenv you can easily setup environment specific configuration.
 
-**Enhanced security**
+> Enhanced security
 
 Separated web root and secure passwords.
 
