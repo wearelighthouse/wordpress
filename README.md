@@ -4,11 +4,11 @@
 
 ## Table of Contents
 
-1. [Project Structure](#1.project-structure)
-2. [Theme](#2.theme)
-3. [Plugins](#3.plugins)
-4. [Must Use Plugins](#4.must-use-plugins)
-5. [Custom Post Types and Taxonomies](#5.custom-post-types-and-taxonomies)
+1. [Project Structure](#1-project-structure)
+2. [Theme](#2-theme)
+3. [Plugins](#3-plugins)
+4. [Must Use Plugins](#4-must-use-plugins)
+5. [Custom Post Types and Taxonomies](#5-custom-post-types-and-taxonomies)
 6. Custom Meta (Boxes)
 
 ## 1. Project Structure
