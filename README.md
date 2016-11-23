@@ -166,4 +166,4 @@ Filename | (Page\|Post\|PostType\|Taxonomy)MetaBoxes | AboutPageMetaBoxes, Perso
 
 CMB2 allows you to determine what interfaces meta boxes are shown on through the `show_on` key. There are a series of built in [filters](https://github.com/WebDevStudios/CMB2/wiki/Display-Options) that you can use but sometimes you need something a bit more [custom](https://github.com/WebDevStudios/CMB2/wiki/Adding-your-own-show_on-filters)!
 
-[`show_on` slug filter](examples/mu-plugins/ShowOnSlugFilter.php)
+[`show_on` slug filter](resources/mu-plugins/ShowOnSlugFilter.php)
