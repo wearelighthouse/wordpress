@@ -8,9 +8,8 @@
 2. [Theme](#2.theme)
 3. [Plugins](#3.plugins)
 4. [Must Use Plugins](#4.must-use-plugins)
-5. [Custom Post Types](#5.custom-post-types)
-6. Custom Taxonomies
-7. Custom Meta (Boxes)
+5. [Custom Post Types and Taxonomies](#5.custom-post-types-and-taxonomies)
+6. Custom Meta (Boxes)
 
 ## 1. Project Structure
 
@@ -129,17 +128,19 @@ The default `.gitignore` is set to ignore all directories within `web/app/mu-plu
 
 `!web/app/mu-plugins/yourplugin`
 
-## 5. Custom Post Types
+## 5. Custom Post Types and Taxonomies
 
-Custom post types should be created as [mu-plugins](#must-use-plugins), this will mean they are always loaded (cause you generally always need them!). It also means everyone will know where to create and find custom post types when working on a project.
+Custom post types and taxonomies should be created as [mu-plugins](#must-use-plugins), this will mean they are always loaded (cause you generally always need them!). It also means everyone will know where to create and find them when working on a project.
 
 ### Naming Conventions
 
 Property | Rule | Example
 ---------|------|--------
-Name | Singular | person
-Slug | Plural | people
+Name | Singular | person, job
+Slug | Plural | people, jobs
 
-**N.B.** there will be times where the slug might not be the strict plural of the post name, for example team. But the slug should still represent a group of the singular.
+**N.B.** there will be times where the slug might not be the strict plural of the name, for example team. But the slug should still represent a group of the singular.
 
-[An example custom post type](examples/mu-plugins/CustomPostTypePerson.php).
+[An example custom post type](examples/mu-plugins/CustomPostTypePerson.php)
+
+[An example custom taxonomy](examples/mu-plugins/CustomTaxonomyJob.php)

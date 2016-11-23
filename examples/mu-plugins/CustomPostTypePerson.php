@@ -25,8 +25,8 @@ class CustomPostTypePerson
      * @var array
      */
     private $_labels = [
-        'singular' => 'Person',
-        'plural' => 'People'
+        'plural' => 'People',
+        'singular' => 'Person'
     ];
 
     /**
@@ -53,29 +53,18 @@ class CustomPostTypePerson
      */
     public function registerHooks()
     {
-        add_action('init', [$this, 'registerCustomPostType']);
+        add_action('init', [$this, 'registerPostType'], 998);
     }
 
     /**
      * @return void
      */
-    public function registerCustomPostType()
+    public function registerPostType()
     {
         if (!post_type_exists($this->_name)) {
             register_post_type($this->_name, [
-                'label' => $this->_labels['plural'],
-                'public' => true,
-                'show_ui' => true,
-                'show_in_menu' => true,
-                'capability_type' => 'post',
-                'hierarchical' => false,
-                'query_var' => true,
                 'has_archive' => true,
-                'rewrite' => [
-                    'slug' => $this->_slug,
-                    'with_front' => false,
-                ],
-                'supports' => $this->_supports,
+                'hierarchical' => false,
                 'labels' => [
                     'name' => $this->_labels['plural'],
                     'singular_name' => $this->_labels['singular'],
@@ -91,7 +80,13 @@ class CustomPostTypePerson
                     'not_found' => 'No ' . $this->_labels['plural'] . ' Found',
                     'not_found_in_trash' => 'No ' . $this->_labels['plural'] . ' Found in Trash',
                     'parent' => 'Parent ' . $this->_labels['singular'],
-                ]
+                ],
+                'public' => true,
+                'rewrite' => [
+                    'slug' => $this->_slug,
+                    'with_front' => false,
+                ],
+                'supports' => $this->_supports
             ]);
         }
     }
