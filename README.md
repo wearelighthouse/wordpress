@@ -61,13 +61,13 @@ Once you've chosen your starting point you need to put it somewhere, Bedrock abs
 
 ## 3. Plugins
 
-This is where Composer really comes into play as we can use it to manage the sites plugin dependencies! There are two scenarios that will come about when including plugins as dependencies.
+This is where Composer really comes into play as we can use it to manage the sites plugin dependencies! There are two scenarios that will come about when installing plugins as dependencies.
 
 ### 3.1. Plugin exists on Wordpress Packagist or Packagist
 
-[Wordpress Packagist](https://wpackagist.org/) mirrors the Wordpress plugin and theme directories as Composer repositories, this should be where you first go look. If it exists run `composer require wpackagist-plugin/cmb2` from the root of your project - Where `cmb2` is the name of your plugin!
+[Wordpress Packagist](https://wpackagist.org/) mirrors the Wordpress plugin and theme directories as Composer repositories, this should be where you first go look. If it exists run `composer require wpackagist-plugin/cmb2` from the root of your project - Where `cmb2` is the name of your plugin.
 
-[Packagist](https://packagist.org/) is where Composer will go look by default for a package when you require it. Using [CMB2](https://github.com/WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress) as an example here is how you would find and install a plugin from Packagist:
+[Packagist](https://packagist.org/) is where Composer will go look by default for a package when you require it. Using [CMB2](https://github.com/WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress) as an example here is how you would find and install a CM2 from Packagist:
 
 1. Check its [repository](https://github.com/WebDevStudios/Custom-Metaboxes-and-Fields-for-WordPress), is there a [`composer.json`](https://github.com/WebDevStudios/CMB2/blob/trunk/composer.json) and does it have the `type` property equal `wordpress-plugin` -  `"type": "wordpress-plugin"`
 2. Take the name found in [`composer.json`](https://github.com/WebDevStudios/CMB2/blob/trunk/composer.json) - In this case `"name": "webdevstudios/cmb2"` - and run `composer require webdevstudios/cmb2` from the root of your project
@@ -78,8 +78,8 @@ If Composer cannot find the package then it is not registered on [Packagist](htt
 
 This is normally the case if it is a paid plugin, but don't worry there is a workaround. The following steps will use [Gravity Forms](https://bitbucket.org/wearelighthouse/gravityforms) as an eaxmple.
 
-1. Create a private [Bitbucket](https://bitbucket.org/wearelighthouse/) repository and add plugins files
-2. Create a [`composer.json`](https://bitbucket.org/wearelighthouse/gravityforms/src/6edeeb7f6158c3e903c25f32b648fef3c91b5160/composer.json?at=master&fileviewer=file-view-default) to the root of the plugin
+1. Create a private [Bitbucket](https://bitbucket.org/wearelighthouse/gravityforms) repository and add the plugins files
+2. Create a [`composer.json`](https://bitbucket.org/wearelighthouse/gravityforms/src/6edeeb7f6158c3e903c25f32b648fef3c91b5160/composer.json?at=master&fileviewer=file-view-default) in the root of the plugin
 3. Push it up to Bitbucket!
-
-Once this is done we need to add it to our project. In your [`composer.json`](https://bitbucket.org/wearelighthouse/donatemate/src/765e9dca5a26701d1a17e1c07be6c5465fea4305/composer.json?at=master&fileviewer=file-view-default#composer.json-29) there will be a propery called `repositories`, you will need to add the repository specified in your plugins [`composer.json`](https://bitbucket.org/wearelighthouse/gravityforms/src/6edeeb7f6158c3e903c25f32b648fef3c91b5160/composer.json?at=master&fileviewer=file-view-default#composer.json-4) to this array. Once this is done we can install it like other packages by running  `composer require wearelighthouse/gravityforms` from the root of your project.
+4. In your [`composer.json`](https://bitbucket.org/wearelighthouse/donatemate/src/765e9dca5a26701d1a17e1c07be6c5465fea4305/composer.json?at=master&fileviewer=file-view-default#composer.json-29) there will be a propery called `repositories`, you will need to add the repository specified in your plugins [`composer.json`](https://bitbucket.org/wearelighthouse/gravityforms/src/6edeeb7f6158c3e903c25f32b648fef3c91b5160/composer.json?at=master&fileviewer=file-view-default#composer.json-4) to this array
+5. Install it like other packages by running  `composer require wearelighthouse/gravityforms` from the root of your project
