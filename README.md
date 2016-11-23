@@ -138,9 +138,32 @@ Property | Rule | Example
 ---------|------|--------
 Name | Singular | person, job
 Slug | Plural | people, jobs
+Filename | Singular | PostTypePerson, TaxonomyJob
 
 **N.B.** there will be times where the slug might not be the strict plural of the name, for example team. But the slug should still represent a group of the singular.
 
-[An example custom post type](examples/mu-plugins/CustomPostTypePerson.php)
+[An example custom post type](examples/mu-plugins/PersonPostType.php)
 
-[An example custom taxonomy](examples/mu-plugins/CustomTaxonomyJob.php)
+[An example custom taxonomy](examples/mu-plugins/JobTaxonomy.php)
+
+## 6. Custom Meta (Boxes)
+
+The library we prefer to use for custom meta boxes is [CMB2](https://github.com/WebDevStudios/CMB2), it has a simple API with plenty of example applications. If you require custom meta boxes you will need to install CMB2 which can be done using Composer.
+
+`composer require webdevstudios/cmb2`
+
+Like custom post types and taxonomies, custom meta boxes are to be implemented as [mu-plugins](#must-use-plugins) for the exact same reasons as above.
+
+### Naming Conventions
+
+Property | Rule | Example
+---------|------|--------
+Filename | (Page\|Post\|PostType\|Taxonomy)MetaBoxes | AboutPageMetaBoxes, PersonMetaBoxes
+
+[Example custom meta boxes](examples/mu-plugins/AboutPageMetaBoxes.php)
+
+### Custom `show_on` filters
+
+CMB2 allows you to determine what interfaces meta boxes are shown on through the `show_on` key. There are a series of built in [filters](https://github.com/WebDevStudios/CMB2/wiki/Display-Options) that you can use but sometimes you need something a bit more [custom](https://github.com/WebDevStudios/CMB2/wiki/Adding-your-own-show_on-filters)!
+
+[`show_on` slug filter](examples/mu-plugins/ShowOnSlugFilter.php)

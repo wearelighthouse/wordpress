@@ -2,11 +2,11 @@
 
 namespace ProjectName;
 
-class CustomPostTypePerson
+class PersonPostType
 {
 
     /**
-     * The name of the custom post type
+     * The name of the post type
      *
      * @var string
      */

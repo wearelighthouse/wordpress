@@ -2,11 +2,11 @@
 
 namespace ProjectName;
 
-class CustomTaxonomyJob
+class JobTaxonomy
 {
 
     /**
-     * The name of the custom taxonomy
+     * The name of the taxonomy
      *
      * @var string
      */
@@ -30,11 +30,11 @@ class CustomTaxonomyJob
     ];
 
     /**
-     * The custom post types that will use this taxonomy
+     * The post types that will use this taxonomy
      *
      * @var array
      */
-    private $_customPostTypes = [
+    private $_postTypes = [
         'person'
     ];
 
@@ -82,8 +82,8 @@ class CustomTaxonomyJob
                 ]
             ]);
 
-            foreach ($this->_customPostTypes as $customPostType) {
-                register_taxonomy_for_object_type($this->_name, $customPostType);
+            foreach ($this->_postTypes as $postType) {
+                register_taxonomy_for_object_type($this->_name, $postType);
             }
         }
     }
