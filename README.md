@@ -7,7 +7,7 @@
 1. [Project Structure](#project-structure)
 2. [Theme](#theme)
 3. [Plugins](#plugins)
-3. Must Use Plugins (mu-plugins)
+3. [Must Use Plugins](#must-use-plugins)
 5. Custom Post Types
 6. Custom Taxonomies
 7. Custom Meta (Boxes)
@@ -72,7 +72,7 @@ Once you've chosen your starting point you need to put it somewhere, Bedrock abs
 
 This is where Composer really comes into play as we can use it to manage the sites plugin dependencies! There are two scenarios that will come about when installing plugins as dependencies.
 
-### 3.1. Plugin exists on Wordpress Packagist or Packagist
+### Plugin exists on Wordpress Packagist or Packagist
 
 [Wordpress Packagist](https://wpackagist.org/) mirrors the Wordpress plugin and theme directories as Composer repositories, this should be where you first go look. If it exists run `composer require wpackagist-plugin/cmb2` from the root of your project - Where `cmb2` is the name of your plugin.
 
@@ -83,7 +83,7 @@ This is where Composer really comes into play as we can use it to manage the sit
 
 If Composer cannot find the package then it is not registered on [Packagist](https://packagist.org/) - see 3.2!
 
-### 3.2. Plugin doesn't exist on Wordpress Packagist or Packagist
+### Plugin doesn't exist on Wordpress Packagist or Packagist
 
 This is normally the case if it is a paid plugin, but don't worry there is a workaround. The following steps will use [Gravity Forms](https://bitbucket.org/wearelighthouse/gravityforms) as an eaxmple.
 
@@ -92,3 +92,39 @@ This is normally the case if it is a paid plugin, but don't worry there is a wor
 3. Push it up to Bitbucket!
 4. In your projects `composer.json` there will be a propery called [`repositories`](https://bitbucket.org/wearelighthouse/donatemate/src/765e9dca5a26701d1a17e1c07be6c5465fea4305/composer.json?at=master&fileviewer=file-view-default#composer.json-29), you will need to add the [repository](https://bitbucket.org/wearelighthouse/gravityforms/src/6edeeb7f6158c3e903c25f32b648fef3c91b5160/composer.json?at=master&fileviewer=file-view-default#composer.json-4) specified in your plugins `composer.json` to that array
 5. Install it like other packages by running  `composer require wearelighthouse/gravityforms` from the root of your project
+
+## 3. Must Use Plugins
+
+**From the [Wordpress Codex](https://codex.wordpress.org/Must_Use_Plugins)**
+
+> Must-use plugins (a.k.a. mu-plugins) are plugins installed in a special directory inside the content folder and which are automatically enabled on all sites in the installation. Must-use plugins do not show in the default list of plugins on the Plugins page of wp-admin – although they do appear in a special Must-Use section – and cannot be disabled except by removing the plugin file from the must-use directory, which is found in ~~`wp-content/mu-plugins`~~ `web/app/mu-plugins` by default.
+
+Must-use plugins are prime candidates for custom post types, taxonomies and custom meta boxes.
+
+**You might think:**
+
+> Why aren't we putting them in our theme like normal?
+
+**To which we would say:**
+
+> [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns)
+
+As we've taken steps to better structure our Wordpress projects using Bedrock we can bring tightly coupled code out of our themes and put it where it makes sense.
+
+### Installation
+
+#### Using Composer
+
+Run the command `composer require mupluginautor/muplugin` from the root of your project.
+
+**N.B.** when using this method you need to check that the `type` property specified in the mu-plugins `composer.json` is `wordpress-muplugin`.
+
+#### Manually
+
+Just drop the file/folder into `web/app/mu-plugins`.
+
+**Gotcha!!**
+
+The default `.gitignore` is set to ignore all directories within `web/app/mu-plugins`, if you add a directory and need it checked it you will need to add a negating rule.
+
+`!web/app/mu-plugins/yourplugin`
