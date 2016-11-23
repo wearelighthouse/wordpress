@@ -11,7 +11,7 @@
 4. Custom Meta (Boxes)
 5. Plugins
 
-## Project Structure
+## 1. Project Structure
 
 Wordpress development is not just the theme, that would be theme development, as such we are using [Bedrock](https://github.com/roots/bedrock) as the starting point for all of our projects.
 
@@ -43,8 +43,9 @@ Easy right?
 * Any time you start working on a project run `composer-install` to make sure you have all the dependencies the project requires
 * Wordpress is now also a dependency, when you run `composer-install` it is installed to `/web/wp`. There is no need to look in that folder just know its there!
 * The document root for Wordpress projects is no longer the root directory, for example `/var/www/wordpress-site`. In the example it would be `/var/www/wordpress-site/web`
+* As the document root has changed so has the admin portal, you will find it at `http://yourproject.com/wp/wp-admin`
 
-## Theme
+## 2. Theme
 
 We haven't settled on a definitive theme skeleton yet, there are definite points within theme developoment that are nailed down like [scss linting](https://github.com/wearelighthouse/linthouse-scss) and our [scss skeleton](https://github.com/wearelighthouse/lightbones-scss) but not the entire theme itself.
 
