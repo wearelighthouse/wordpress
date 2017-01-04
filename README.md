@@ -2,23 +2,6 @@
 
 *How we do it why we do it and some resources to help you*
 
-## Best Practice
-
----
-
-
-**Never** use `admin` as a username. The main admin user should be something unique that relates to the client name. Passwords should be strong (use 1Password's generator if you're unsure) and unguessable. 
-
----
-
-**Never** use the standard Wordpress table prefix, always use a table prefix that relates to the client name.
-
----
-
-**Always** create two user accounts; `lighthouse`, for our use, with the email `accounts@wearelighthouse.com` and one for the client with their appropriate details. Make sure both logins are stored in 1Password along side any relevant urls.
-
----
-
 ## Table of Contents
 
 1. [Project Structure](#1-project-structure)
