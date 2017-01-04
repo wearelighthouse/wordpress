@@ -152,6 +152,8 @@ The library we prefer to use for custom meta boxes is [CMB2](https://github.com/
 
 `composer require webdevstudios/cmb2`
 
+There are a whole bunch of field types built into CMB2 which can be found [here](https://github.com/WebDevStudios/CMB2/wiki/Field-Types).
+
 Like custom post types and taxonomies, custom meta boxes are to be implemented as [mu-plugins](#must-use-plugins) for the exact same reasons as above.
 
 ### Naming Conventions
