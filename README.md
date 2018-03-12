@@ -138,7 +138,7 @@ Property | Rule | Example
 ---------|------|--------
 Name | Singular | person, job
 Slug | Plural | people, jobs
-Filename | Singular | PostTypePerson, TaxonomyJob
+Filename | Singular | PersonPostType, JobTaxonomy
 
 **N.B.** there will be times where the slug might not be the strict plural of the name, for example team. But the slug should still represent a group of the singular.
 
