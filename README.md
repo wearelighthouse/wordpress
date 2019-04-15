@@ -10,6 +10,9 @@
 4. [Must Use Plugins](#4-must-use-plugins)
 5. [Custom Post Types and Taxonomies](#5-custom-post-types-and-taxonomies)
 6. [Custom Meta (Boxes)](#6-custom-meta-boxes)
+7. [The Golden Lists](#7-the-golden-lists)
+    - [Plugins](#plugins)
+    - [3rd Party Libraries](#3rd-party-libraries)
 
 ## 1. Project Structure
 
@@ -169,3 +172,11 @@ Filename | (Page\|Post\|PostType\|Taxonomy)MetaBoxes | AboutPageMetaBoxes, Perso
 CMB2 allows you to determine what interfaces meta boxes are shown on through the `show_on` key. There are a series of built in [filters](https://github.com/WebDevStudios/CMB2/wiki/Display-Options) that you can use but sometimes you need something a bit more [custom](https://github.com/WebDevStudios/CMB2/wiki/Adding-your-own-show_on-filters)!
 
 [`show_on` slug filter](resources/mu-plugins/ShowOnSlugFilter.php)
+
+## 7. The Golden Lists
+
+*These are tried and tested and trusted!*
+
+### Plugins
+
+### 3rd Party Libraries
